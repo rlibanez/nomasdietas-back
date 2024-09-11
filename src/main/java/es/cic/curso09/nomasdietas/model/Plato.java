@@ -31,7 +31,7 @@ public class Plato {
     private String descripcion;
 
     @Size(max = 64)
-    private List<@Size(min = 1, max = 64) String> otrosIngredientes = new ArrayList<>();
+    private String otrosIngredientes;
 
     // Unidades por cada 100 gramos de plato
     @NotNull
@@ -74,11 +74,11 @@ public class Plato {
         this.descripcion = descripcion;
     }
 
-    public List<String> getOtrosIngredientes() {
+    public String getOtrosIngredientes() {
         return otrosIngredientes;
     }
 
-    public void setOtrosIngredientes(List<String> otrosIngredientes) {
+    public void setOtrosIngredientes(String otrosIngredientes) {
         this.otrosIngredientes = otrosIngredientes;
     }
 
