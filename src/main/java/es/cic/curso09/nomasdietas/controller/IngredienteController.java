@@ -38,7 +38,7 @@ public class IngredienteController {
     }
 
     @GetMapping("/platos/{id}")
-    public ResponseEntity<List<Plato>> getAllProgramasByTipo(@PathVariable Long id) {
+    public ResponseEntity<List<Plato>> getAllPlatosByIngrediente(@PathVariable Long id) {
         Optional<Ingrediente> optionalIngrediente = ingredienteService.getIngredienteById(id);
         if (optionalIngrediente.isPresent()) {
             Ingrediente ingrediente = optionalIngrediente.get();

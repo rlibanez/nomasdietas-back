@@ -20,5 +20,5 @@ CREATE TABLE plato (
     grasas FLOAT CHECK (grasas >= 0),
     favorito BOOLEAN DEFAULT FALSE,
     ingrediente_id BIGINT NOT NULL,
-    FOREIGN KEY (ingrediente_id) REFERENCES ingrediente(id)
+    FOREIGN KEY (ingrediente_id) REFERENCES ingrediente(id) ON DELETE RESTRICT
 );

@@ -39,8 +39,7 @@ public class Ingrediente {
     private float grasas;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "ingrediente", cascade = { CascadeType.PERSIST, CascadeType.REMOVE,
-            CascadeType.MERGE }, orphanRemoval = true)
+    @OneToMany(mappedBy = "ingrediente", cascade = { CascadeType.PERSIST, CascadeType.MERGE }, orphanRemoval = false)
     private List<Plato> platos = new ArrayList<>();
 
     public Long getId() {
