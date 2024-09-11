@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import es.cic.curso09.nomasdietas.model.Ingrediente;
+import es.cic.curso09.nomasdietas.model.Plato;
 import es.cic.curso09.nomasdietas.repository.IngredienteRepository;
 
 @Service
@@ -25,6 +26,10 @@ public class IngredienteService {
 
     public Optional<Ingrediente> getIngredienteById(Long id) {
         return ingredienteRepository.findById(id);
+    }
+
+    public List<Plato> getAllPlatosByIngrediente(Ingrediente ingrediente) {
+        return ingrediente.getPlatos();
     }
 
     public void deleteIngrediente(Long id) {
