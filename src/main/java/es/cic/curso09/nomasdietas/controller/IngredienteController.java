@@ -61,9 +61,6 @@ public class IngredienteController {
         Optional<Ingrediente> existingIngrediente = ingredienteService.getIngredienteById(newIngrediente.getId());
 
         if (existingIngrediente.isPresent()) {
-            // Ingrediente programaToUpdate = existingIngrediente.get();
-            // ingrediente.setFechaModificacion(LocalDateTime.now());
-            // TODO: comprobar fechas de newIngrediente
             return ResponseEntity.ok(ingredienteService.updateIngrediente(newIngrediente));
         } else {
             return ResponseEntity.notFound().build();
